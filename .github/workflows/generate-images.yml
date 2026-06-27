@@ -1,0 +1,44 @@
+name: Generate Images
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      width:
+        description: 'Image width'
+        required: false
+        default: '800'
+      height:
+        description: 'Image height'
+        required: false
+        default: '600'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install Pillow
+      
+      - name: Generate images
+        run: python scripts/generate_images.py
+        env:
+          WIDTH: ${{ github.event.inputs.width || '800' }}
+          HEIGHT: ${{ github.event.inputs.height || '600' }}
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-images
+          path: output/
+          retention-days: 30
