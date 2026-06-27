@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install Pillow
+
+      - name: Generate images
+        run: python scripts/generate_images.py
+
+      - name: Package images
+        run: cd output && tar -czf ../images.tar.gz *.png
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: images.tar.gz
+          generate_release_notes: true
