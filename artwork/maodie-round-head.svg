@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">圆头耄耋 · 原图复刻</title>
+  <desc id="desc">按“圆头耄耋”原视频截图复刻的矢量图：一只浅橘色猫坐在猫爬架上，耳朵向后压平成飞机耳，从正面看整个头是一个圆，睁着一双发直的圆眼睛盯着镜头，胸前挡着白色猫爬架柱子，背景是灰色房间。</desc>
+  <defs>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#9b9592"/><stop offset=".55" stop-color="#b9b3b0"/><stop offset="1" stop-color="#a39c99"/></linearGradient>
+    <radialGradient id="head" cx="50%" cy="42%" r="58%"><stop stop-color="#f7dcbc"/><stop offset=".6" stop-color="#efc89c"/><stop offset=".9" stop-color="#e2b07e"/><stop offset="1" stop-color="#d49f6c"/></radialGradient>
+    <linearGradient id="body" x2="0" y2="1"><stop stop-color="#ecc394"/><stop offset="1" stop-color="#d6a674"/></linearGradient>
+    <radialGradient id="muzzle" cx="50%" cy="40%" r="60%"><stop stop-color="#fbeedd"/><stop offset="1" stop-color="#f1d6b5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="iris" cx="45%" cy="40%" r="60%"><stop stop-color="#c79a5c"/><stop offset=".7" stop-color="#8f6234"/><stop offset="1" stop-color="#5a3a1c"/></radialGradient>
+    <linearGradient id="post" x2="1"><stop stop-color="#d9d6d4"/><stop offset=".35" stop-color="#ffffff"/><stop offset=".8" stop-color="#eeeceb"/><stop offset="1" stop-color="#c9c5c3"/></linearGradient>
+    <radialGradient id="shade"><stop stop-color="#6b4a2e" stop-opacity=".35"/><stop offset="1" stop-color="#6b4a2e" stop-opacity="0"/></radialGradient>
+    <clipPath id="headClip"><ellipse cx="512" cy="392" rx="300" ry="288"/></clipPath>
+  </defs>
+
+  <!-- grey room -->
+  <rect width="1024" height="1024" fill="url(#room)"/>
+  <rect x="40" y="150" width="210" height="420" fill="#cfcac7"/>
+  <rect x="40" y="150" width="210" height="14" fill="#efecea"/>
+  <path d="M0,560H290V600H0Z" fill="#6f6966"/>
+  <rect x="20" y="520" width="140" height="40" rx="4" fill="#7f97a8"/>
+  <path d="M0,0H1024V60Q512,30 0,60Z" fill="#7d7673"/>
+  <path d="M930,0Q990,400 960,1024H1024V0Z" fill="#8a8380"/>
+  <rect x="740" y="520" width="260" height="140" fill="#ece8e6"/>
+
+  <!-- body, sitting -->
+  <ellipse cx="512" cy="1010" rx="360" ry="40" fill="url(#shade)"/>
+  <path d="M300,600C240,700 210,860 230,1024H800C820,860 790,700 724,600Z" fill="url(#body)"/>
+  <g fill="none" stroke="#c88f5c" stroke-width="10" stroke-linecap="round" opacity=".35">
+    <path d="M262,760Q300,780 320,830M250,840Q290,860 300,910M760,760Q722,780 704,830M774,840Q734,860 722,910"/>
+  </g>
+  <!-- front legs -->
+  <path d="M330,760C320,860 318,960 330,1024H430C424,940 420,850 420,760Z" fill="#e8bd8c"/>
+  <path d="M604,760C604,850 600,940 594,1024H694C706,960 704,860 694,760Z" fill="#e8bd8c"/>
+
+  <!-- white cat-tree post in front of the chest -->
+  <rect x="440" y="740" width="150" height="284" fill="url(#post)"/>
+  <ellipse cx="515" cy="740" rx="75" ry="16" fill="#f7f6f5" stroke="#bdb8b5" stroke-width="3"/>
+
+  <!-- the round head: ears are pressed flat, so the outline stays a circle -->
+  <ellipse cx="512" cy="392" rx="300" ry="288" fill="url(#head)"/>
+  <g clip-path="url(#headClip)">
+    <!-- flattened ears: just a faint fold along the top of the skull -->
+    <path d="M250,250Q290,150 380,128Q330,190 300,262Z" fill="#d9a575" opacity=".55"/>
+    <path d="M774,250Q734,150 644,128Q694,190 724,262Z" fill="#d9a575" opacity=".55"/>
+    <path d="M262,246Q300,172 370,140" fill="none" stroke="#f9e4c9" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <path d="M762,246Q724,172 654,140" fill="none" stroke="#f9e4c9" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+    <!-- faint forehead tabby stripes -->
+    <g fill="none" stroke="#d29a63" stroke-linecap="round" opacity=".45">
+      <path d="M512,118V250" stroke-width="12"/>
+      <path d="M468,124Q474,190 486,250M556,124Q550,190 538,250" stroke-width="9"/>
+      <path d="M424,140Q440,200 458,256M600,140Q584,200 566,256" stroke-width="7"/>
+    </g>
+    <!-- cheek stripes -->
+    <g fill="none" stroke="#d29a63" stroke-width="8" stroke-linecap="round" opacity=".35">
+      <path d="M220,420Q260,430 300,420M226,470Q264,476 300,466"/>
+      <path d="M804,420Q764,430 724,420M798,470Q760,476 724,466"/>
+    </g>
+    <!-- soft shading toward the jaw -->
+    <ellipse cx="512" cy="660" rx="300" ry="90" fill="#c99566" opacity=".25"/>
+  </g>
+
+  <!-- puffy white muzzle and chin -->
+  <ellipse cx="512" cy="520" rx="150" ry="110" fill="url(#muzzle)"/>
+  <ellipse cx="455" cy="545" rx="72" ry="54" fill="#f8e6cf"/>
+  <ellipse cx="569" cy="545" rx="72" ry="54" fill="#f8e6cf"/>
+  <ellipse cx="512" cy="600" rx="60" ry="34" fill="#f3dcc0"/>
+  <g fill="#b98b62" opacity=".55">
+    <circle cx="430" cy="540" r="3.5"/><circle cx="452" cy="556" r="3.5"/><circle cx="420" cy="562" r="3.5"/>
+    <circle cx="594" cy="540" r="3.5"/><circle cx="572" cy="556" r="3.5"/><circle cx="604" cy="562" r="3.5"/>
+  </g>
+
+  <!-- the dazed, half-lidded stare -->
+  <g>
+    <ellipse cx="388" cy="378" rx="40" ry="34" fill="#3a2614"/>
+    <ellipse cx="388" cy="380" rx="34" ry="29" fill="url(#iris)"/>
+    <ellipse cx="390" cy="384" rx="17" ry="20" fill="#140c05"/>
+    <ellipse cx="376" cy="386" rx="7" ry="5" fill="#fff" opacity=".9"/>
+    <path d="M348,376Q388,348 428,376A40,34 0 0 0 348,376Z" fill="#edc596"/>
+    <path d="M344,376Q388,352 432,376" fill="none" stroke="#3a2614" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="636" cy="372" rx="40" ry="34" fill="#3a2614"/>
+    <ellipse cx="636" cy="374" rx="34" ry="29" fill="url(#iris)"/>
+    <ellipse cx="638" cy="378" rx="17" ry="20" fill="#140c05"/>
+    <ellipse cx="624" cy="380" rx="7" ry="5" fill="#fff" opacity=".9"/>
+    <path d="M596,370Q636,342 676,370A40,34 0 0 0 596,370Z" fill="#edc596"/>
+    <path d="M592,370Q636,346 680,370" fill="none" stroke="#3a2614" stroke-width="6" stroke-linecap="round"/>
+    <path d="M352,406Q338,432 344,452M672,400Q686,426 680,446" fill="none" stroke="#c48d58" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <!-- nose and mouth -->
+  <path d="M512,430V488" stroke="#e3b48a" stroke-width="18" stroke-linecap="round" opacity=".6"/>
+  <path d="M488,494Q512,486 536,494Q530,516 512,522Q494,516 488,494Z" fill="#d8968a"/>
+  <path d="M512,522V546M512,546Q494,566 474,560M512,546Q530,566 550,560" fill="none" stroke="#8a5f45" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- whiskers -->
+  <g fill="none" stroke="#fffaf2" stroke-width="2.5" stroke-linecap="round" opacity=".85">
+    <path d="M410,548Q300,520 200,530M410,562Q300,560 196,584M414,576Q320,594 230,636"/>
+    <path d="M614,548Q724,520 824,530M614,562Q724,560 828,584M610,576Q704,594 794,636"/>
+  </g>
+</svg>
