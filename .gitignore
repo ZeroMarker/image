@@ -1,3 +1,6 @@
 output/
 __pycache__/
 *.pyc
+
+# 微信封面导出图
+cover/*/

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>圣诞节微信红包气泡挂件（480×384，透明底）</title>
+<style>
+  * { margin: 0; padding: 0; }
+  html, body { width: 480px; height: 384px; overflow: hidden; background: transparent; }
+  body.preview { background: #A3121D; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<!-- 气泡挂件：戴圣诞帽、围红围巾的小雪人。加 ?preview 可在红底上预览 -->
+<svg width="480" height="384" viewBox="0 0 480 384" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="snowBody" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.7" stop-color="#F3F6FB"/><stop offset="1" stop-color="#C9D6E6"/>
+    </radialGradient>
+    <linearGradient id="hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F0384A"/><stop offset="1" stop-color="#A50E1E"/>
+    </linearGradient>
+    <linearGradient id="scarf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E5283A"/><stop offset="1" stop-color="#A50E1E"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#3A0006" flood-opacity="0.35"/>
+    </filter>
+    <symbol id="flake" viewBox="-50 -50 100 100">
+      <g stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none">
+        <g id="arm"><line x1="0" y1="0" x2="0" y2="-44"/><polyline points="-12,-30 0,-19 12,-30"/></g>
+        <use href="#arm" transform="rotate(60)"/><use href="#arm" transform="rotate(120)"/>
+        <use href="#arm" transform="rotate(180)"/><use href="#arm" transform="rotate(240)"/><use href="#arm" transform="rotate(300)"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- 雪花 -->
+    <use href="#flake" x="44" y="70" width="58" height="58" opacity="0.95"/>
+    <use href="#flake" x="384" y="150" width="46" height="46" opacity="0.9"/>
+    <use href="#flake" x="40" y="300" width="34" height="34" opacity="0.85"/>
+
+    <!-- 身体 -->
+    <ellipse cx="240" cy="296" rx="102" ry="78" fill="url(#snowBody)"/>
+    <circle cx="240" cy="296" r="7" fill="#3A2A2A"/>
+    <circle cx="240" cy="332" r="7" fill="#3A2A2A"/>
+    <!-- 树枝手臂 -->
+    <path d="M150,270 L92,232 M114,246 L100,224 M330,270 L392,222 M368,238 L384,212" stroke="#6B3A1E" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <!-- 头 -->
+    <circle cx="240" cy="176" r="76" fill="url(#snowBody)"/>
+    <!-- 围巾 -->
+    <path d="M168,222 Q240,262 312,222 L314,248 Q240,290 166,248 Z" fill="url(#scarf)"/>
+    <path d="M184,236 l0,22 M206,244 l0,24 M228,248 l0,24 M252,248 l0,24 M274,244 l0,24 M296,236 l0,22" stroke="#FFFFFF" stroke-width="5" opacity="0.85"/>
+    <path d="M276,246 L300,330 L330,322 L300,240 Z" fill="url(#scarf)"/>
+    <path d="M300,330 l4,14 M310,327 l4,14 M320,324 l4,14" stroke="#E5283A" stroke-width="5" stroke-linecap="round"/>
+    <!-- 脸 -->
+    <circle cx="214" cy="168" r="9" fill="#2A1E1E"/><circle cx="217" cy="165" r="3" fill="#fff"/>
+    <circle cx="266" cy="168" r="9" fill="#2A1E1E"/><circle cx="269" cy="165" r="3" fill="#fff"/>
+    <path d="M238,186 L300,200 L238,198 Z" fill="#F28A2E" stroke="#D96A16" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M214,212 Q240,228 266,212" stroke="#2A1E1E" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="194" cy="196" rx="13" ry="8" fill="#FF8A9A" opacity="0.55"/>
+    <ellipse cx="290" cy="212" rx="12" ry="8" fill="#FF8A9A" opacity="0.55"/>
+    <!-- 圣诞帽 -->
+    <path d="M168,124 C176,52 262,22 330,58 C356,72 372,98 378,126 L354,130 C346,104 330,92 312,92 C318,104 316,116 312,124 Z" fill="url(#hat)"/>
+    <rect x="156" y="112" width="172" height="34" rx="17" fill="#FFFFFF"/>
+    <rect x="156" y="112" width="172" height="34" rx="17" fill="none" stroke="#E6ECF4" stroke-width="3"/>
+    <circle cx="374" cy="140" r="22" fill="#FFFFFF" stroke="#E6ECF4" stroke-width="3"/>
+  </g>
+</svg>
+<script>if (location.search.includes('preview')) document.body.classList.add('preview');</script>
+</body>
+</html>

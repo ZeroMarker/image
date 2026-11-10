@@ -8,6 +8,7 @@ GitHub Actions 自动图片生成项目。
 .github/workflows/generate-images.yml  # GitHub Actions 工作流
 scripts/generate_images.py              # 图片生成脚本
 output/                                 # 生成的图片（gitignore）
+cover/                                  # 微信红包封面设计（纯 HTML，浏览器截图导出），见 cover/README.md
 ```
 
 ## 使用方式

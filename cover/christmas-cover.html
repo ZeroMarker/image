@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>圣诞节微信红包封面（957×1278）</title>
+<style>
+  * { margin: 0; padding: 0; }
+  html, body { width: 957px; height: 1278px; overflow: hidden; background: #6E0A14; }
+  svg { display: block; }
+  .zh { font-family: 'Noto Serif CJK SC', 'Songti SC', serif; font-weight: 900; }
+  .script { font-family: 'Z003', 'Snell Roundhand', cursive; }
+  .latin { font-family: 'P052', 'Palatino', serif; }
+</style>
+</head>
+<body>
+<!--
+  主视觉（标题 + 圣诞树）集中在上方 ~62%。
+  下方区域会被“XX发出的红包”与“開”按钮覆盖，只保留低对比的雪地与雪花，避免干扰。
+-->
+<svg id="art" width="957" height="1278" viewBox="0 0 957 1278" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="36%" r="80%">
+      <stop offset="0" stop-color="#D3242E"/>
+      <stop offset="0.45" stop-color="#A3121D"/>
+      <stop offset="1" stop-color="#5A0610"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFD98A" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#FFB547" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFB547" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF1C2"/>
+      <stop offset="0.45" stop-color="#F6C963"/>
+      <stop offset="1" stop-color="#C98A2B"/>
+    </linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F6C963" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFE3A0"/>
+      <stop offset="1" stop-color="#F6C963" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E9A5F"/>
+      <stop offset="1" stop-color="#0D4A2C"/>
+    </linearGradient>
+    <linearGradient id="snowGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="0.35" stop-color="#FCE9E9" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FCE9E9" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ballRed" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#FF8A8A"/>
+      <stop offset="0.4" stop-color="#E5283A"/>
+      <stop offset="1" stop-color="#8A0A16"/>
+    </radialGradient>
+    <radialGradient id="ballGold" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#FFF6D8"/>
+      <stop offset="0.45" stop-color="#F3C25A"/>
+      <stop offset="1" stop-color="#A8701E"/>
+    </radialGradient>
+    <radialGradient id="ballWhite" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.6" stop-color="#F1E6E6"/>
+      <stop offset="1" stop-color="#C9B3B5"/>
+    </radialGradient>
+    <radialGradient id="bulb" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFFBE6"/>
+      <stop offset="0.35" stop-color="#FFE08A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFC24D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="textShadow" x="-10%" y="-30%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#4A030A" flood-opacity="0.55"/>
+    </filter>
+    <symbol id="flake" viewBox="-50 -50 100 100">
+      <g stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none">
+        <g id="arm"><line x1="0" y1="0" x2="0" y2="-44"/><polyline points="-11,-30 0,-20 11,-30"/><polyline points="-8,-42 0,-35 8,-42"/></g>
+        <use href="#arm" transform="rotate(60)"/><use href="#arm" transform="rotate(120)"/>
+        <use href="#arm" transform="rotate(180)"/><use href="#arm" transform="rotate(240)"/><use href="#arm" transform="rotate(300)"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <rect width="957" height="1278" fill="url(#bg)"/>
+  <g id="bigFlakes"></g>
+
+  <!-- 标题 -->
+  <g text-anchor="middle" filter="url(#textShadow)">
+    <text class="script" x="478.5" y="150" font-size="82" fill="url(#gold)">Merry Christmas</text>
+    <text class="zh" x="492" y="270" font-size="112" letter-spacing="28" fill="url(#gold)">圣诞快乐</text>
+  </g>
+  <rect x="318" y="300" width="321" height="2" fill="url(#goldH)"/>
+  <text class="latin" x="478.5" y="332" text-anchor="middle" font-size="20" letter-spacing="9" fill="#FFE3A0" opacity="0.8">PEACE · JOY · LOVE</text>
+
+  <!-- 圣诞树 -->
+  <g transform="translate(0,45)">
+    <ellipse cx="478.5" cy="600" rx="340" ry="300" fill="url(#glow)"/>
+    <g id="tree"></g>
+    <g id="gifts"></g>
+  </g>
+
+  <!-- 雪地 -->
+  <path d="M0,857 C140,815 300,835 478,845 C660,855 820,813 957,835 L957,1060 L0,1060 Z" fill="url(#snowGround)"/>
+  <path d="M0,857 C140,815 300,835 478,845 C660,855 820,813 957,835" fill="none" stroke="#fff" stroke-width="3" opacity="0.8"/>
+
+  <g id="snow"></g>
+</svg>
+
+<script>
+(function () {
+  const NS = 'http://www.w3.org/2000/svg';
+  let seed = 20261225;
+  const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+  const $ = id => document.getElementById(id);
+  const CX = 478.5;
+
+  // 背景大雪花（低透明度）
+  [[90, 470, 90, 0.07], [880, 520, 120, 0.06], [140, 1000, 140, 0.05], [830, 1120, 110, 0.06], [470, 1180, 70, 0.05], [60, 250, 50, 0.08], [905, 300, 46, 0.08]]
+    .forEach(([x, y, s, o]) => el('use', { href: '#flake', x: x - s / 2, y: y - s / 2, width: s, height: s, opacity: o, transform: `rotate(${rnd() * 30} ${x} ${y})` }, $('bigFlakes')));
+
+  // 圣诞树：四层带波浪下沿的树冠
+  const tree = $('tree');
+  el('rect', { x: CX - 26, y: 742, width: 52, height: 52, rx: 6, fill: '#6B3A1E' }, tree);
+  const tiers = [ // [顶点y, 底边y, 底宽]
+    [528, 770, 500], [462, 670, 400], [408, 578, 300], [368, 490, 196]
+  ];
+  const tipsByTier = [];
+  tiers.forEach(([ty, by, w]) => {
+    const n = Math.max(4, Math.round(w / 60));
+    const seg = w / n, L = CX - w / 2, R = CX + w / 2;
+    let d = `M${CX},${ty} L${R},${by}`;
+    let snow = `M${R},${by}`;
+    const tips = [];
+    for (let i = n; i > 0; i--) {
+      const x0 = L + seg * i, x1 = L + seg * (i - 1), xm = (x0 + x1) / 2;
+      d += ` Q${xm},${by - 26} ${x1},${by}`;
+      snow += ` Q${xm},${by - 26} ${x1},${by}`;
+      tips.push([x1, by]);
+    }
+    d += ' Z';
+    el('path', { d: d, fill: 'url(#pine)' }, tree);
+    el('path', { d: snow, fill: 'none', stroke: '#FFFFFF', 'stroke-width': 9, 'stroke-linecap': 'round', opacity: 0.92 }, tree);
+    el('path', { d: `M${CX},${ty} L${R},${by}`, stroke: '#7FD3A0', 'stroke-width': 2, opacity: 0.35 }, tree);
+    tipsByTier.push(tips);
+  });
+
+  // 金色花环 + 暖光小灯
+  [[392, 460, 80], [470, 552, 128], [548, 646, 180], [628, 735, 228]].forEach(([y0, y1, half]) => {
+    const x0 = CX - half * 0.55, x1 = CX + half * 0.95;
+    const cy = (y0 + y1) / 2 + 26;
+    const d = `M${x0},${y0} Q${CX + half * 0.1},${cy + 10} ${x1},${y1 - 18}`;
+    el('path', { d, stroke: '#F6C963', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round', opacity: 0.95 }, tree);
+    const p = el('path', { d, fill: 'none' }, tree);
+    const len = p.getTotalLength();
+    for (let s = 14; s < len; s += 34) {
+      const pt = p.getPointAtLength(s);
+      el('circle', { cx: pt.x, cy: pt.y, r: 13, fill: 'url(#bulb)' }, tree);
+      el('circle', { cx: pt.x, cy: pt.y, r: 3.2, fill: '#FFFBEA' }, tree);
+    }
+  });
+
+  // 圣诞球挂在波浪尖上
+  const fills = ['ballRed', 'ballGold', 'ballRed', 'ballWhite'];
+  tipsByTier.forEach((tips, ti) => {
+    tips.slice(1, -1).forEach((t, i) => {
+      const r = ti === 0 ? 15 : 12;
+      const f = fills[(i + ti) % fills.length];
+      el('line', { x1: t[0], y1: t[1] - 4, x2: t[0], y2: t[1] + 8, stroke: '#F6C963', 'stroke-width': 2 }, tree);
+      el('circle', { cx: t[0], cy: t[1] + 8 + r, r, fill: `url(#${f})` }, tree);
+      el('circle', { cx: t[0] - r * 0.35, cy: t[1] + 8 + r * 0.6, r: r * 0.22, fill: '#fff', opacity: 0.7 }, tree);
+    });
+  });
+
+  // 树顶星
+  const star = (cx, cy, R, r) => { let pts = []; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r : R; pts.push(`${(cx + rr * Math.cos(a)).toFixed(1)},${(cy + rr * Math.sin(a)).toFixed(1)}`); } return pts.join(' '); };
+  el('circle', { cx: CX, cy: 360, r: 62, fill: 'url(#glow)' }, tree);
+  el('polygon', { points: star(CX, 360, 46, 19), fill: '#FFE9A8', filter: 'url(#soft)', opacity: 0.8 }, tree);
+  el('polygon', { points: star(CX, 360, 42, 17), fill: 'url(#gold)', stroke: '#FFF5D6', 'stroke-width': 2, 'stroke-linejoin': 'round' }, tree);
+  [[0, 64], [90, 56], [180, 46], [270, 56]].forEach(([a, l]) => el('line', { x1: CX, y1: 360 - l, x2: CX, y2: 360 - l * 0.72, stroke: '#FFF1C2', 'stroke-width': 2.5, 'stroke-linecap': 'round', transform: `rotate(${a + 45} ${CX} 360)`, opacity: 0.75 }, tree));
+
+  // 礼物盒
+  const gifts = $('gifts');
+  const gift = (x, y, w, h, box, ribbon) => {
+    el('rect', { x, y, width: w, height: h, rx: 4, fill: box }, gifts);
+    el('rect', { x, y, width: w, height: h * 0.22, rx: 4, fill: '#000', opacity: 0.08 }, gifts);
+    el('rect', { x: x + w / 2 - 6, y, width: 12, height: h, fill: ribbon }, gifts);
+    el('rect', { x: x - 4, y: y - 2, width: w + 8, height: 14, rx: 3, fill: box, stroke: ribbon, 'stroke-width': 0 }, gifts);
+    el('rect', { x: x + w / 2 - 6, y: y - 2, width: 12, height: 14, fill: ribbon }, gifts);
+    el('path', { d: `M${x + w / 2},${y - 2} c-26,-30 -40,-4 -4,0 M${x + w / 2},${y - 2} c26,-30 40,-4 4,0`, stroke: ribbon, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' }, gifts);
+  };
+  gift(282, 728, 96, 78, '#F2C35B', '#C8102E');
+  gift(372, 760, 64, 46, '#FFFFFF', '#D9263A');
+  gift(536, 744, 78, 62, '#1E7A4A', '#F6C963');
+  gift(608, 716, 92, 90, '#E23243', '#FFF1C2');
+
+  // 飘雪
+  const snow = $('snow');
+  for (let i = 0; i < 150; i++) {
+    const x = rnd() * 957, y = rnd() * 1278;
+    if (y > 90 && y < 350 && x > 150 && x < 810) continue; // 标题区留白
+    const r = 1.4 + Math.pow(rnd(), 2.2) * 5;
+    el('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: r.toFixed(2), fill: '#fff', opacity: (0.35 + rnd() * 0.55).toFixed(2) }, snow);
+  }
+  document.body.dataset.ready = '1';
+})();
+</script>
+</body>
+</html>
